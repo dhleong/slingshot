@@ -1,10 +1,10 @@
 package net.dhleong.slingshot
 
 import android.app.Activity
+import android.content.Context
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.tasks.Task
 import io.reactivex.Completable
 import io.reactivex.Maybe
 import io.reactivex.Single
@@ -16,7 +16,7 @@ object Slingshot {
     private const val TAG = "net.dhleong.slingshot"
 
     fun checkSignIn(
-        context: Activity
+        context: Context
     ): Maybe<GoogleSignInAccount> = Maybe.defer {
         GoogleSignIn.getLastSignedInAccount(context)?.let {
             Maybe.just(it)

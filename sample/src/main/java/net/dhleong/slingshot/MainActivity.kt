@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         sign_out.setOnClickListener {
             Slingshot.signOut(this)
                 .subscribe {
-                    text.setText("Hello world!")
+                    text.setText(R.string.hello_world)
                     get_display_name.visibility = VISIBLE
                     sign_out.visibility = GONE
                 }
