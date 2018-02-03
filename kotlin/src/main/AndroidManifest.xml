@@ -1,2 +1,2 @@
-<manifest package="net.dhleong.slingshot"
+<manifest package="net.dhleong.slingshot.ext"
     xmlns:android="http://schemas.android.com/apk/res/android"/>
